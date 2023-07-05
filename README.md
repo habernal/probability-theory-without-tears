@@ -1,2 +1,1 @@
-# probability-theory-without-tears
-Probability Theory: Rigorously, Visually, Without Tears
+# Probability Theory: Rigorously, Visually, Without Tears
