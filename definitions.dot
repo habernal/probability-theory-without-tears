@@ -1,0 +1,222 @@
+digraph G {
+
+graph [ ]
+
+ranksep=7; # large space between same-rank nodes
+#splines=ortho;
+nodesep = 0.5;  # more space between all nodes
+
+
+node [fixedsize=false,
+#fontname="Ubuntu"
+#fontsize=24,
+#height=1,
+shape=box,
+#style="filled,setlinewidth(6)"
+width=2.2
+#style=filled,
+fillcolor=palegreen1,
+]
+
+
+subgraph cluster_1 {
+label = "Probability theory";
+style=filled;
+color=gray95;
+
+Set [label="", image="nodes/Set.png"]
+
+
+Set_of_Sets [label="", image="nodes/Set_of_Sets.png"]
+
+Set_of_Sets -> Set
+
+Unit_of_System_of_Sets [label="", image="nodes/Unit_of_System_of_Sets.png"]
+
+Unit_of_System_of_Sets -> Set_of_Sets
+
+Ordered_Pair [label="", image="nodes/Ordered_Pair.png"]
+
+Set_Difference [label="", image="nodes/Set_Difference.png"]
+
+Set_Difference -> Set
+
+Cartesian_Product [label="", image="nodes/Cartesian_Product.png"]
+
+Cartesian_Product -> Set
+
+Cartesian_Product -> Ordered_Pair
+
+Mapping [label="", image="nodes/Mapping.png"]
+
+Mapping -> Cartesian_Product
+
+Closed_under_Mapping [label="", image="nodes/Closed_under_Mapping.png"]
+
+Closed_under_Mapping -> Mapping
+
+Set_Union_Countable_Union [label="", image="nodes/Set_Union_Countable_Union.png"]
+
+Sequence [label="", image="nodes/Sequence.png"]
+
+Sequence -> Mapping
+
+
+Set_Union_Countable_Union -> Set_of_Sets
+Set_Union_Countable_Union -> Sequence
+
+
+# Indexing_Set [label=
+# "Indexing Set
+# TODO"]
+# 
+# Indexing_Set_Indexed_Set [label=
+# "Indexing Set/Indexed Set
+# TODO"]
+# 
+# Indexing_Set -> Set
+# 
+# Indexing_Set_Family [label=
+# "Indexing Set/Family
+# TODO"]
+# 
+# Indexing_Set_Family_of_Sets [label=
+# "Indexing Set/Family of Sets
+# TODO"]
+# 
+# Indexing_Set_Family_of_Sets -> Indexing_Set
+# Indexing_Set_Family_of_Sets -> Set_of_Sets
+# Indexing_Set_Family_of_Sets -> Indexing_Set_Family
+# 
+# Set_Union_Family_of_Sets [label=
+# "Set Union/Family of Sets
+# TODO"]
+# 
+# Set_Union_Family_of_Sets -> Indexing_Set
+# Set_Union_Family_of_Sets -> Indexing_Set_Indexed_Set
+
+
+
+Power_Set [label="", image="nodes/Power_Set.png"]
+
+Power_Set -> Set
+
+Power_Set -> Set_of_Sets
+
+
+Relative_Complement [label="", image="nodes/Relative_Complement.png"]
+
+Relative_Complement -> Set_Difference
+
+Topology [label="", image="nodes/Topology.png"]
+
+Topological_Space [label="", image="nodes/Topological_Space.png"]
+
+
+Sigma_Algebra [label="", image="nodes/Sigma_Algebra.png"]
+
+
+Sigma_Algebra -> Unit_of_System_of_Sets
+Sigma_Algebra -> Closed_under_Mapping
+
+Sigma_Algebra -> Set_Union_Countable_Union
+Sigma_Algebra -> Relative_Complement
+
+
+
+
+
+Borel_Sigma_Algebra [label="", image="nodes/Borel_Sigma_Algebra.png"]
+
+Borel_Sigma_Algebra -> Topological_Space
+Borel_Sigma_Algebra -> Sigma_Algebra_Generated_by_Collection_of_Subsets
+Borel_Sigma_Algebra -> Open_Set_Topology
+
+Open_Set_Topology [label="", image="nodes/Open_Set_Topology.png"]
+
+Open_Set_Topology -> Topological_Space
+
+
+Sigma_Algebra_Generated_by_Collection_of_Subsets [label="", image="nodes/Sigma_Algebra_Generated_by_Collection_of_Subsets.png"]
+
+Sigma_Algebra_Generated_by_Collection_of_Subsets -> Sigma_Algebra
+
+
+Topological_Space -> Topology
+
+
+
+Topology -> Power_Set
+
+Difference_Topology_Sigma_Algebra -> Topology
+Difference_Topology_Sigma_Algebra -> Sigma_Algebra
+
+Difference_Topology_Sigma_Algebra [label="", image="nodes/Difference_Topology_Sigma_Algebra.png"]
+
+
+Measurable_Space [label="", image="nodes/Measurable_Space.png"]
+
+Measurable_Space -> Sigma_Algebra
+
+
+Measure_Measure_Theory [label="", image="nodes/Measure_Measure_Theory.png"]
+
+Measure_Measure_Theory -> Measurable_Space
+Measure_Measure_Theory -> Countably_Additive_Function
+
+Countably_Additive_Function [label="", image="nodes/Countably_Additive_Function.png"]
+Countably_Additive_Function -> Sigma_Algebra
+
+Measure_Space [label="", image="nodes/Measure_Space.png"]
+Measure_Space -> Measure_Measure_Theory
+Measure_Space -> Measurable_Space
+Measure_Space -> Sigma_Algebra
+
+# Probability_Measure [label="", image="nodes/Probability_Measure.png"]
+# Probability_Measure -> Measure_Space
+# Probability_Measure -> Measure_Measure_Theory
+
+Probability_Space [label="", image="nodes/Probability_Space.png"]
+Probability_Space -> Measure_Space
+Probability_Space -> Measurable_Space
+
+Experiment [label="", image="nodes/Experiment.png"]
+Experiment -> Probability_Space
+
+Elementary_Event [label="", image="nodes/Elementary_Event.png"]
+Elementary_Event -> Experiment
+
+Measurable_Function_Real_Valued_Function [label="", image="nodes/Measurable_Function_Real_Valued_Function.png"]
+Measurable_Function_Real_Valued_Function -> Measurable_Space
+
+Measurable_Set [label="", image="nodes/Measurable_Set.png"]
+Measurable_Set -> Measurable_Space
+
+Measurable_Mapping [label="", image="nodes/Measurable_Mapping.png"]
+Measurable_Mapping -> Measurable_Space
+
+Random_Variable_General_Definition [label="", image="nodes/Random_Variable_General_Definition.png"]
+Random_Variable_General_Definition -> Probability_Space
+Random_Variable_General_Definition -> Measurable_Space
+Random_Variable_General_Definition -> Measurable_Mapping
+
+
+Real_Valued_Random_Variable [label="", image="nodes/Real_Valued_Random_Variable.png"]
+Real_Valued_Random_Variable -> Probability_Space
+Real_Valued_Random_Variable -> Borel_Sigma_Algebra
+Real_Valued_Random_Variable -> Random_Variable_General_Definition
+
+
+Real_Valued_Random_Variable_Notation [label="", image="nodes/Real_Valued_Random_Variable_Notation.png"]
+Real_Valued_Random_Variable_Notation -> Real_Valued_Random_Variable
+Real_Valued_Random_Variable_Notation -> Measurable_Set
+
+
+Discrete_Random_Variable [label="", image="nodes/Discrete_Random_Variable.png"]
+Discrete_Random_Variable -> Random_Variable_General_Definition
+
+}
+
+
+
+}
