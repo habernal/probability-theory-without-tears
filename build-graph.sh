@@ -7,3 +7,6 @@ cd nodes
 cd ..
 
 dot -Gdpi=100 -Tpdf -O definitions.dot -Granksep=2 -Gsplines=ortho
+
+# create PNG snapshot
+pdftoppm -r 30 definitions.dot.pdf snapshot -png -singlefile
