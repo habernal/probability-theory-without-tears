@@ -167,10 +167,6 @@ Measure_Space -> Measure_Measure_Theory
 Measure_Space -> Measurable_Space
 Measure_Space -> Sigma_Algebra
 
-# Probability_Measure [label="", image="nodes/Probability_Measure.png"]
-# Probability_Measure -> Measure_Space
-# Probability_Measure -> Measure_Measure_Theory
-
 
 # Measurable_Function_Real_Valued_Function [label="", image="nodes/Measurable_Function_Real_Valued_Function.png"]
 # Measurable_Function_Real_Valued_Function -> Measurable_Space
@@ -199,6 +195,11 @@ Experiment -> Probability_Space
 Elementary_Event [label="", image="nodes/Elementary_Event.png"]
 Elementary_Event -> Experiment
 
+Probability_Measure [label="", image="nodes/Probability_Measure.png"]
+Probability_Measure -> Measure_Space
+Probability_Measure -> Measure_Measure_Theory
+Probability_Measure -> Experiment
+
 Random_Variable_General_Definition [label="", image="nodes/Random_Variable_General_Definition.png"]
 Random_Variable_General_Definition -> Probability_Space
 Random_Variable_General_Definition -> Measurable_Space
@@ -219,9 +220,19 @@ Real_Valued_Random_Variable_Notation -> Measurable_Set
 Discrete_Random_Variable [label="", image="nodes/Discrete_Random_Variable.png"]
 Discrete_Random_Variable -> Random_Variable_General_Definition
 
+Cumulative_Distribution_Function [label="", image="nodes/Cumulative_Distribution_Function.png"]
+Cumulative_Distribution_Function -> Real_Valued_Random_Variable
+
+Continuous_Random_Variable [label="", image="nodes/Continuous_Random_Variable.png"]
+Continuous_Random_Variable -> Real_Valued_Random_Variable
+Continuous_Random_Variable -> Cumulative_Distribution_Function
 
 
-
+Probability_Formal_Definition [label="", image="nodes/Probability_Formal_Definition.png"]
+Probability_Formal_Definition -> Experiment
+Probability_Formal_Definition -> Event
+Probability_Formal_Definition -> Event_Space
+Probability_Formal_Definition -> Probability_Measure
 }
 
 
