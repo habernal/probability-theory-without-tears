@@ -165,7 +165,7 @@ Countably_Additive_Function -> Sigma_Algebra
 Measure_Space [label="", image="nodes/Measure_Space.png"]
 Measure_Space -> Measure_Measure_Theory
 Measure_Space -> Measurable_Space
-Measure_Space -> Sigma_Algebra
+# Measure_Space -> Sigma_Algebra
 
 
 # Measurable_Function_Real_Valued_Function [label="", image="nodes/Measurable_Function_Real_Valued_Function.png"]
@@ -202,7 +202,7 @@ Probability_Measure -> Experiment
 
 Random_Variable_General_Definition [label="", image="nodes/Random_Variable_General_Definition.png"]
 Random_Variable_General_Definition -> Probability_Space
-Random_Variable_General_Definition -> Measurable_Space
+# Random_Variable_General_Definition -> Measurable_Space
 Random_Variable_General_Definition -> Measurable_Mapping
 
 
