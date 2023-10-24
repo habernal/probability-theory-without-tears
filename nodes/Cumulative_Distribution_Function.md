@@ -1,4 +1,4 @@
-# Cumulative Distribution Function
+## Cumulative Distribution Function
 
 Let $(\Omega, \Sigma, \Pr)$ be a **probability space**.
 

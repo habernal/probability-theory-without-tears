@@ -181,7 +181,7 @@ Measurable_Mapping -> Measurable_Space
 }
 
 subgraph cluster_4 {
-label = "Probability theory";
+label = "Probability theory core";
 fontsize=48;
 style=filled;
 color=honeydew;
@@ -199,6 +199,29 @@ Probability_Measure [label="", image="nodes/Probability_Measure.png"]
 Probability_Measure -> Measure_Space
 Probability_Measure -> Measure_Measure_Theory
 Probability_Measure -> Experiment
+
+Probability_Formal_Definition [label="", image="nodes/Probability_Formal_Definition.png"]
+Probability_Formal_Definition -> Experiment
+Probability_Formal_Definition -> Event
+Probability_Formal_Definition -> Event_Space
+Probability_Formal_Definition -> Probability_Measure
+
+Event_Space [label="", image="nodes/Event_Space.png"]
+Event_Space -> Experiment
+
+Event [label="", image="nodes/Event.png"]
+
+Occurence [label="", image="nodes/Occurence.png"]
+Occurence -> Event
+
+}
+
+
+subgraph cluster_5 {
+label = "Random variables";
+fontsize=48;
+style=filled;
+color=floralwhite;
 
 Random_Variable_General_Definition [label="", image="nodes/Random_Variable_General_Definition.png"]
 Random_Variable_General_Definition -> Probability_Space
@@ -227,12 +250,6 @@ Continuous_Random_Variable [label="", image="nodes/Continuous_Random_Variable.pn
 Continuous_Random_Variable -> Real_Valued_Random_Variable
 Continuous_Random_Variable -> Cumulative_Distribution_Function
 
-
-Probability_Formal_Definition [label="", image="nodes/Probability_Formal_Definition.png"]
-Probability_Formal_Definition -> Experiment
-Probability_Formal_Definition -> Event
-Probability_Formal_Definition -> Event_Space
-Probability_Formal_Definition -> Probability_Measure
 }
 
 
