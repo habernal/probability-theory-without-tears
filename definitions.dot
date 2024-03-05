@@ -106,7 +106,7 @@ Power_Set [label="", image="nodes/Power_Set.png"]
 Power_Set -> Set_of_Sets
 
 
-Power_Set_is_Sigma_Algebra
+Power_Set_is_Sigma_Algebra [label="", image="nodes/Power_Set_is_Sigma_Algebra.png"]
 
 Power_Set_is_Sigma_Algebra -> Power_Set
 Power_Set_is_Sigma_Algebra -> Sigma_Algebra
