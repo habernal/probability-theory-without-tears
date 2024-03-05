@@ -30,13 +30,13 @@ Set [label="", image="nodes/Set.png"]
 Set_of_Sets [label="", image="nodes/Set_of_Sets.png"]
 Set_of_Sets -> Set
 
-Unit_of_System_of_Sets [label="", image="nodes/Unit_of_System_of_Sets.png"]
-Unit_of_System_of_Sets -> Set_of_Sets
+# Unit_of_System_of_Sets [label="", image="nodes/Unit_of_System_of_Sets.png"]
+# Unit_of_System_of_Sets -> Set_of_Sets
 
 Ordered_Pair [label="", image="nodes/Ordered_Pair.png"]
 
-Set_Difference [label="", image="nodes/Set_Difference.png"]
-Set_Difference -> Set
+# Set_Difference [label="", image="nodes/Set_Difference.png"]
+# Set_Difference -> Set
 
 Cartesian_Product [label="", image="nodes/Cartesian_Product.png"]
 Cartesian_Product -> Set
@@ -45,16 +45,16 @@ Cartesian_Product -> Ordered_Pair
 Mapping [label="", image="nodes/Mapping.png"]
 Mapping -> Cartesian_Product
 
-Closed_under_Mapping [label="", image="nodes/Closed_under_Mapping.png"]
-Closed_under_Mapping -> Mapping
+# Closed_under_Mapping [label="", image="nodes/Closed_under_Mapping.png"]
+# Closed_under_Mapping -> Mapping
 
-Sequence [label="", image="nodes/Sequence.png"]
-Sequence -> Mapping
+# Sequence [label="", image="nodes/Sequence.png"]
+# Sequence -> Mapping
 
 
-Set_Union_Countable_Union [label="", image="nodes/Set_Union_Countable_Union.png"]
-Set_Union_Countable_Union -> Set_of_Sets
-Set_Union_Countable_Union -> Sequence
+# Set_Union_Countable_Union [label="", image="nodes/Set_Union_Countable_Union.png"]
+# Set_Union_Countable_Union -> Set_of_Sets
+# Set_Union_Countable_Union -> Sequence
 
 
 
@@ -89,18 +89,27 @@ Set_Union_Countable_Union -> Sequence
 
 
 
-
-
-Relative_Complement [label="", image="nodes/Relative_Complement.png"]
-Relative_Complement -> Set_Difference
+# Relative_Complement [label="", image="nodes/Relative_Complement.png"]
+# Relative_Complement -> Set_Difference
 
 
 Sigma_Algebra [label="", image="nodes/Sigma_Algebra.png"]
-Sigma_Algebra -> Unit_of_System_of_Sets
-Sigma_Algebra -> Closed_under_Mapping
-Sigma_Algebra -> Set_Union_Countable_Union
-Sigma_Algebra -> Relative_Complement
 
+Sigma_Algebra -> Set_of_Sets
+# Sigma_Algebra -> Unit_of_System_of_Sets
+# Sigma_Algebra -> Closed_under_Mapping
+# Sigma_Algebra -> Set_Union_Countable_Union
+# Sigma_Algebra -> Relative_Complement
+
+
+Power_Set [label="", image="nodes/Power_Set.png"]
+Power_Set -> Set_of_Sets
+
+
+Power_Set_is_Sigma_Algebra
+
+Power_Set_is_Sigma_Algebra -> Power_Set
+Power_Set_is_Sigma_Algebra -> Sigma_Algebra
 
 
 }
@@ -113,8 +122,6 @@ fontsize=48;
 style=filled;
 color=lightsteelblue1;
 
-Power_Set [label="", image="nodes/Power_Set.png"]
-Power_Set -> Set_of_Sets
 
 
 Topology [label="", image="nodes/Topology.png"]
@@ -176,6 +183,7 @@ Measurable_Set -> Measurable_Space
 
 Measurable_Mapping [label="", image="nodes/Measurable_Mapping.png"]
 Measurable_Mapping -> Measurable_Space
+Measurable_Mapping -> Mapping
 
 
 }
